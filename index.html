@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Helios Productions</title>
   </head>
-  <style type="text/css">
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
 
-    @media only screen and (min-width: 960px) {
+
+
+  <!-- @media only screen and (min-width: 960px) {
       .container {
         max-width: 960px !important;
       }
@@ -34,8 +32,153 @@
       .container {
         width: 100% !important;
       }
+    } -->
+
+  /* CSS BEGIN */
+  <style>
+    /* What it does: Remove spaces around the email design added by some email clients. */
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+    html,
+    body {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+    /* What it does: Stops email clients resizing small text. */
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* What it does: Centers email on Android 4.4 */
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    /* What it does: Stops Outlook from adding extra spacing to tables. */
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+    /* What it does: Fixes webkit padding issue. */
+    table {
+      border: 0;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    /* What it does: Forces Samsung Android mail clients to use the entire viewport. */
+    #MessageViewBody,
+    #MessageWebViewDiv {
+      width: 100% !important;
+    }
+
+    /* What it does: Uses a better rendering method when resizing images in IE. */
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+    a {
+      text-decoration: none;
+    }
+
+    /* What it does: A work-around for email clients automatically linking certain text strings. */
+    /* iOS */
+    a[x-apple-data-detectors],
+    .unstyle-auto-detected-links a,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    u+#body a,
+    /* Gmail */
+    #MessageViewBody a
+
+    /* Samsung Mail */
+      {
+      color: inherit;
+      text-decoration: none;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+
+    /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+    .im {
+      color: inherit !important;
+    }
+
+    /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+
+    /* If the above doesn't work, add a .g-img class to any image in question. */
+    img.g-img+div {
+      display: none !important;
+    }
+
+    /* What it does: Removes right gutter in Gmail iOS app.  */
+    /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+    /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+      u~div .email-container {
+        min-width: 320px !important;
+      }
+    }
+
+    /* iPhone 6, 6S, 7, 8, and X */
+    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      u~div .email-container {
+        min-width: 375px !important;
+      }
+    }
+
+    /* iPhone 6+, 7+, and 8+ */
+    @media only screen and (min-device-width: 414px) {
+      u~div .email-container {
+        min-width: 414px !important;
+      }
     }
   </style>
+  <!-- What it does: Helps DPI scaling in Outlook 2007-2013 -->
+  <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+    <![endif]-->
+
+  <!-- CSS Reset : END -->
+  </style>
+
+  <!-- Visually Hidden Preview Text : BEGIN -->
+  <div
+    style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+    (Optional) This text will appear in the inbox preview, but not the email body. It can be used to supplement the
+    email subject line or even summarize the email's contents. Extended text preheaders (~490 characters) seems like a
+    better UX for anyone using a screenreader or voice-command apps like Siri to dictate the contents of an email. If
+    this text is not included, email clients will automatically populate it using the text (including image alt text) at
+    the start of the email's body.
+  </div>
+  <!-- Visually Hidden Preview Text : END -->
 
   <body style="margin: 0; background-color: #222222">
 
@@ -78,7 +221,7 @@
                             <w:anchorlock/>
                             <center style="color:#000000;font-family:sans-serif;font-size:13px;font-weight:bold;">Shop Now</center>
                           </v:roundrect>
-                        <![endif]--><a href="http://example.com"
+                        <![endif]--><a href="https://www.heliosproductions.com/"
                           style="background-color:#ffffff;border:1px solid #1e3650;border-radius:0px;color:#000000;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;">Shop
                           Now</a></div>
                       <!-- /CTA -->
@@ -96,7 +239,8 @@
                 <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
                   <tr>
                     <td>
-                      <img src="img/food_n_drink.jpg" alt="" style="display: block;">
+                      <img src="img/food_n_drink.jpg" alt="Image of 4 drinks and donuts on an orange table"
+                        style="display: block;">
                     </td>
                   </tr>
                 </table>
@@ -132,26 +276,28 @@
               <td style="padding: 8px;background-color:#FFFFFF;">
                 <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
 
-                  <!-- Start of Product Section 1 -->
+                  <!-- Start of Product Section 1 & 2 -->
                   <tr>
                     <td style="background-color: #FFFFFF;">
                       <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
                         <tr>
                           <td align="center" style="padding: 24px 16px;" width="50%">
-                            <img style="width: 100%;display: block;" src="img/shoes.jpg" alt="square fill in">
+                            <img style="width: 100%;display: block;" src="img/shoes.jpg"
+                              alt="Image of white with snake skin women's shoes">
                             <!-- CTA -->
                             <div><!--[if mso]>
                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
                             <w:anchorlock/>
                             <center style="color:#000000;font-family:sans-serif;font-size:13px;font-weight:bold;">Shop Now</center>
                           </v:roundrect>
-                        <![endif]--><a href="http://example.com"
+                        <![endif]--><a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj"
                                 style="background-color:#ffffff;border:1px solid #1e3650;border-radius:0px;color:#000000;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 16px;">Product</a>
                             </div>
                             <!-- /CTA -->
                           </td>
                           <td align="center" bgcolor="#FFFFFF" style="padding: 24px 16px" width="50%">
-                            <!-- <img style="width: 100%;" src="img/apparel.jpg" alt="square fill in" valign="top"> -->
+                            <img style="width: 100%;" src="img/apparel.jpg"
+                              alt="Image of a tall Afrikan woman in a long black dress" valign="top">
                             <!-- <h3 style="text-align: center; color: #000000;font-size: 18px;">
                         Lorem ipsum dolor
                       </h3>
@@ -162,7 +308,8 @@
                             <w:anchorlock/>
                             <center style="color:#000000;font-family:sans-serif;font-size:13px;font-weight:bold;">Shop Now</center>
                           </v:roundrect>
-                        <![endif]--><a href="http://example.com"
+                        <![endif]--><a
+                                href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89"
                                 style="background-color:#ffffff;border:1px solid #1e3650;border-radius:0px;color:#000000;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 16px;">Apparel</a>
                             </div>
                             <!-- /CTA -->
@@ -171,42 +318,41 @@
                       </table>
                     </td>
                   </tr>
-                  <!-- End of Product Section 1 -->
+                  <!-- End of Product Section 1 & 2 -->
 
-                  <!-- Start of Product Section 2 -->
+                  <!-- Start of Product Section 3 & 4 -->
                   <tr>
                     <td style="background-color: #FFFFFF;">
                       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
                         <tr>
                           <td align="center" style="padding: 24px 16px" width="50%">
-                            <!-- <img
+                            <img
                               style="width: 100%;background-position: center center;background-repeat: no-repeat;background-size: cover;object-fit: cover;display: block;"
-                              src="img/jewelry.jpg" alt="square fill in" valign="top"> -->
+                              src="img/jewelry.jpg" alt="Image of a necklace with a cirle design inside" valign="top">
                             <div><!--[if mso]>
                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
                             <w:anchorlock/>
                             <center style="color:#000000;font-family:sans-serif;font-size:13px;font-weight:bold;">Shop Now</center>
                           </v:roundrect>
-                        <![endif]--><a href="http://example.com"
-                                style="background-color:#ffffff;border:1px solid #1e3650;border-radius:0px;color:#000000;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:130px;-webkit-text-size-adjust:none;Jmso-hide:all;margin-top: 16px;">jewelry</a>
+                        <![endif]--><a
+                                href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-j5py9"
+                                style="background-color:#ffffff;border:1px solid #1e3650;border-radius:0px;color:#000000;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:130px;-webkit-text-size-adjust:none;Jmso-hide:all;margin-top: 16px;">Jewelry</a>
                             </div>
                             <!-- /CTA -->
                           </td>
                           <td align="center" bgcolor="#FFFFFF" style="padding: 24px 16px" width="50%">
-                            <!-- <img
+                            <img
                               style="width: 100%;background-position: center center;background-repeat: no-repeat;background-size: cover;object-fit: cover;display: block;"
-                              src="img/table.jpg" alt="square fill in" valign="top"> -->
-                            <!-- <h3 style="text-align: center; color: #000000;font-size: 18px;">
-                        Lorem ipsum dolor
-                      </h3>
-                      <p style="text-align: center; color: #000000;font-size: 16px;font-weight: bold;">$30.00</p> -->
+                              src="img/table.jpg" alt="Image of a fancy white table with white plates and glasses"
+                              valign="top">
                             <!-- CTA -->
                             <div><!--[if mso]>
                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
                             <w:anchorlock/>
                             <center style="color:#000000;font-family:sans-serif;font-size:13px;font-weight:bold;">Shop Now</center>
                           </v:roundrect>
-                        <![endif]--><a href="http://example.com"
+                        <![endif]--><a
+                                href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-a2954-d37ns"
                                 style="background-color:#ffffff;border:1px solid #1e3650;border-radius:0px;color:#000000;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 16px;">Food
                                 & Drink</a>
                             </div>
@@ -216,23 +362,25 @@
                       </table>
                     </td>
                   </tr>
-                  <!-- End of Product Section 2 -->
+                  <!-- End of Product Section 3 & 4 -->
 
-                  <!-- Start of Product Section 3 -->
+                  <!-- Start of Product Section 5 -->
                   <tr>
                     <td>
                       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
                         style="background-color: #FFFFFF;max-width: 600px;">
                         <tr>
                           <td align="center" bgcolor="#FFFFFF" style="padding: 16px" width="100%">
-                            <!-- <img style="width: 100%;" src="img/lifestyle5.jpg" alt="square fill in" valign="top"> -->
+                            <img style="width: 100%;" src="img/lifestyle5.jpg"
+                              alt="Image of shelfs and dishes with a chair with aqua painted wall" valign="top">
                             <!-- CTA -->
                             <div><!--[if mso]>
                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
                                   <w:anchorlock/>
                                   <center style="color:#000000;font-family:sans-serif;font-size:13px;font-weight:bold;">Shop Now</center>
                                 </v:roundrect>
-                              <![endif]--><a href="http://example.com"
+                              <![endif]--><a
+                                href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-ar7wt-hglaw"
                                 style="background-color:#ffffff;border:1px solid #1e3650;border-radius:0px;color:#000000;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 16px;">LifeStyle</a>
                             </div>
                             <!-- /CTA -->
@@ -241,7 +389,7 @@
                       </table>
                     </td>
                   </tr>
-                  <!-- End of Product Section 3 -->
+                  <!-- End of Product Section 5 -->
 
                 </table>
               </td>
@@ -311,7 +459,7 @@
                           <w:anchorlock/>
                           <center style="color:#000000;font-family:sans-serif;font-size:13px;font-weight:bold;">Shop Now</center>
                         </v:roundrect>
-                      <![endif]--><a href="http://example.com"
+                      <![endif]--><a href="https://www.heliosproductions.com/"
                           style="background-color:#FF8E04;border-radius:0px;color:#000000;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 16px;">Get
                           Started Today!</a>
                       </div>
@@ -342,7 +490,7 @@
             <!-- End of Distiguished Clients -->
 
             <!-- Start of Client Brands -->
-            <!-- <tr>
+            <tr>
               <td>
                 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
                   style="padding: 24px 24px 120px 24px;background-color: #FFFFFF;">
@@ -404,7 +552,7 @@
                   </tr>
                 </table>
               </td>
-            </tr> -->
+            </tr>
             <!-- End of Client Brands -->
 
             <!-- Start of Social Icons -->
@@ -413,9 +561,15 @@
                 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
                   <tr>
                     <td align="center">
-                      <img src="img/linkedin.png" alt="" style="padding: 0 52px;" width="30px">
-                      <img src="img//instagram.png" alt="" style="padding: 0 52px;" width="30px">
-                      <img src="img/facebook.png" alt="" style="padding: 0 52px;" width="20px">
+                      <a href="https://www.linkedin.com/company/helios-productions-llc/" target="_blank">
+                        <img src="img/linkedin.png" alt="" style="padding: 0 52px;" width="30px">
+                      </a>
+                      <a href="https://www.instagram.com/a_helios_productions/" target="_blank">
+                        <img src="img//instagram.png" alt="" style="padding: 0 52px;" width="30px">
+                      </a>
+                      <a href="https://www.facebook.com/people/Helios-Productions/61550268176676/" target="_blank">
+                        <img src="img/facebook.png" alt="" style="padding: 0 52px;" width="20px">
+                      </a>
                     </td>
                   </tr>
                 </table>
@@ -430,11 +584,11 @@
             <tr>
               <td>
                 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                  style="padding: 72px 24px;background-color: #F6F6F6;">
+                  style="padding: 72px 24px 30px 24px;background-color: #F6F6F6;">
                   <tr>
                     <td align="center">
-                      <!-- <img src="img/helios.png" alt="" width="40%"
-                        style="background-position: center center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 600px;display: block;min-width:250px;"> -->
+                      <img src="img/helios.png" alt="" width="40%"
+                        style="background-position: center center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 600px;display: block;min-width:250px;">
                     </td>
                   </tr>
                 </table>
@@ -477,7 +631,7 @@
       <tr>
         <td>
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-            style="max-width: 600px;padding: 72px 24px 24px 24px;background-color: #F6F6F6;;">
+            style="max-width: 600px;padding: 40px 24px 24px 24px;background-color: #F6F6F6;;">
             <tr>
               <td align="center">
                 <p style="font-size: 18px;color: #646464;">All Rights Reserved 2023. Helio Productions</p>
