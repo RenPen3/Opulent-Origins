@@ -4,18 +4,16 @@
   <head>
     <!-- Desktop Outlook on Windows sometimes chokes on web font references and defaults to Times New Roman, so we force a safe system font fallback. -->
     <!--[if mso]>
-    <style>
-        * {
-            font-family: 'Poppins', sans-serif !important;
-        }
-    </style>
+    <!-- <style>
+      * {
+        font-family: 'Poppins', sans-serif !important;
+      }
+    </style> -->
     <![endif]-->
 
     <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
     <!--[if !mso]><!-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!--<![endif]-->
 
     <meta charset="UTF-8" />
@@ -27,12 +25,12 @@
   </head>
 
   <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
     :root {
       color-scheme: light dark;
       supported-color-schemes: light dark;
     }
-
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
     /* What it does: Remove spaces around the email design added by some email clients. */
     /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
@@ -136,6 +134,10 @@
         margin: 0 !important;
       }
 
+      .why_helios {
+        padding: 40px 25px !important;
+      }
+
       @media (prefers-color-scheme: dark) {
         .fubar {}
       }
@@ -178,43 +180,59 @@
           <table class="container" align="center" width="600" border="0" cellspacing="0" cellpadding="0"
             role="presentation">
 
-            <!-- Start of Hero Image -->
+            <!-- Start of Header -->
             <tr>
-              <td style="background-color: #F2F2F2;padding: 40px 24px 80px 24px;">
+              <td align="center" style="background-color: #F2F2F2; color:#000000;">
                 <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
                   <tr>
-                    <td align="center">
-                      <a href="https://www.heliosproductions.com/">
-                        <img class="logo" src="https://i.ibb.co/SfJYGLw/Helios-Logo-Final-email.png"
-                          alt="Image of Helios Productions logo"
-                          style="display: block;width:100%;max-width: 400px;height:auto;min-width:100px;" width="600"
-                          border="0">
-                      </a>
-
-                      <h3 class="sub-header"
-                        style="padding: 0 0 16px 0;font-weight: 400;font-size: 18px;font-family: 'Poppins', sans-serif;color:#000000">
-                        <span class="gmail-screen"><span class="gmail-difference">Helios Brings Your Products To
-                            Light</span></span>
-                      </h3>
-                      <!-- CTA -->
-                      <div><!--[if mso]>
-                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
-                          <w:anchorlock />
-                          <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:bold;">Shop Now</center>
-                        </v:roundrect>
-                      <![endif]--><a class="btn" href="https://www.heliosproductions.com/"
-                          style="padding:4px 0px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:20px;font-weight:400;line-height:40px;text-align:center;text-decoration:none;width:180px;-webkit-text-size-adjust:none;mso-hide:all;">Explore
-                          Now</a>
-                      </div>
-                      <!-- /CTA -->
+                    <td align="center" style="padding:2px;">
+                      <p style="margin:0;font-size: 14px;">Trouble viewing this email? <a
+                          style="font-size: 14px;color:#6DB597;text-decoration: underline;"
+                          href="https://heliospro.netlify.app/">View In Browser</a></p>
                     </td>
                   </tr>
                 </table>
               </td>
             </tr>
+            <!-- End of Header -->
+            <!-- Start of Hero Image -->
+            <tr>
+              <td style="background-color: #F2F2F2; padding: 80px 24px;">
+                <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                  <tbody>
+                    <tr>
+                      <td align="center">
+                        <a href="https://www.heliosproductions.com/">
+                          <img class="logo" src="https://i.ibb.co/SfJYGLw/Helios-Logo-Final-email.png"
+                            alt="Image of Helios Productions logo"
+                            style="display: block;width:100%;max-width: 350px;height:auto;min-width:100px;" width="600"
+                            border="0">
+                        </a>
+
+                        <h3 class="sub-header"
+                          style="font-weight: 400;font-size: 18px;font-family: 'Poppins', sans-serif;color:#000000">
+                          <span class="gmail-screen"><span class="gmail-difference">Helios Brings Your Products To
+                              Light</span></span>
+                        </h3>
+                        <!-- CTA -->
+                        <!-- <div><!--[if mso]>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
+                          <w:anchorlock />
+                          <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:bold;">Shop Now</center>
+                        </v:roundrect> -->
+                        <![endif]-->
+                        <!-- <a class="btn" href="https://www.heliosproductions.com/"
+                            style="padding:4px 0px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:20px;font-weight:400;line-height:40px;text-align:center;text-decoration:none;width:180px;-webkit-text-size-adjust:none;mso-hide:all;">Explore
+                            Now</a>
+                        </div> -->
+                        <!-- /CTA -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
             <!-- End of Hero Image -->
-
-
             <!-- Start of Image 1 -->
             <tr>
               <td>
@@ -222,10 +240,7 @@
                   <tr>
                     <td align="center">
                       <a href="https://www.heliosproductions.com/">
-                        <img class="g-img" src="https://i.ibb.co/5jGwfby/food-n-drink.jpg"
-                          alt="Image of 4 drinks and donuts on an orange table"
-                          style="display: block;width:100%;max-width: 600px;min-width:100px;height:auto;" width="600"
-                          border="0">
+                        <img class="g-img" src="https://i.ibb.co/5jGwfby/food-n-drink.jpg" alt="Image of 4 drinks and donuts on an orange table" style="display: block;width:100%;max-width: 600px;min-width:100px;height:auto;" width="600" border="0">
                       </a>
                     </td>
                   </tr>
@@ -233,20 +248,16 @@
               </td>
             </tr>
             <!-- End of Image 1 -->
-
-
             <!-- Start of Our Work Banner -->
             <tr>
               <td style="padding:30px 24px;background-color:#F2F2F2;">
                 <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
                   <tr>
-                    <td style="background-color:#e7e7e7;padding:24px;line-height: 30px;">
-                      <h2
-                        style="text-align: center; font-family: 'Poppins', sans-serif;color: #000000; margin: 10px;font-size: 22px;font-family: 'Poppins', sans-serif;font-weight: 600;">
+                    <td style="background-color:#E7E7E7;padding:24px;line-height: 30px;">
+                      <h2 style="text-align: center; font-family: 'Poppins', sans-serif;color: #000000; margin: 10px;font-size: 22px;font-family: 'Poppins', sans-serif;font-weight: 600;">
                         Our Work
                       </h2>
-                      <p
-                        style="text-align: center;font-size: 18px;font-family: 'Montserrat', sans-serif;font-weight: 400;color: #000000;line-height: 28px;">
+                      <p style="text-align: center;font-size: 18px;font-family: 'Montserrat', sans-serif;font-weight: 400;color: #000000;line-height: 28px;">
                         We love to let our work speak for itself, so we’ll
                         keep this short
                         and sweet. Our team of seasoned photographers, stylists, and other professionals work together
@@ -258,43 +269,39 @@
               </td>
             </tr>
             <!-- End of Our Work Banner -->
-
-
             <!-- Start of Divider -->
             <tr>
-              <td align="center" style="background-color: #F2F2F2;padding: 25px;">
+              <td align="center" style="background-color: #F2F2F2; padding: 25px;">
                 <hr style="border: 2px solid lightgrey;width: 200px;border-color: #6DB597;">
               </td>
             </tr>
             <!-- End of Divider -->
-
             <!-- Start of Product Sections -->
             <tr>
               <td style="padding: 20px 0px;background-color:#F2F2F2;">
-                <table class="container" align="center" width="100%" border="0" cellspacing="0" cellpadding="0"
-                  role="presentation">
+                <table class="container" align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
 
                   <!-- Start of Product -->
                   <tr>
-                    <td style="background-color: #F2F2F2;">
-                      <table class="col" align="left" width="50%" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation" style="padding: 24px;">
+                    <td style="background-color: #F2F2F2; ">
+                      <table class="col" align="left" width="50%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="padding: 24px;">
                         <tr>
                           <td align="center">
                             <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj">
-                              <img class="g-img"
-                                style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;"
-                                width="300" border="0" src="https://i.ibb.co/4N5ZdMp/shoes.jpg"
-                                alt="Image of white with snake skin women's shoes" valign="middle">
+                              <img class="g-img" style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;" width="300" border="0" src="https://i.ibb.co/4N5ZdMp/shoes.jpg" alt="Image of white with snake skin women's shoes" valign="middle">
                             </a>
                             <!-- CTA -->
                             <div><!--[if mso]>
-                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
-                                <w:anchorlock />
-                                <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:16px;font-weight:500;">Product</center>
-                              </v:roundrect>
-                            <![endif]--><a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj"
-                                style="padding:4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">Product</a>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                          xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com"
+                          style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650"
+                          fillcolor="#ffffff">
+                          <w:anchorlock />
+                          <center
+                            style="color:#000000;font-family: 'Poppins', sans-serif;font-size:16px;font-weight:500;">
+                            Product</center>
+                        </v:roundrect>
+                        <![endif]--><a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj" style="padding:4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">Product</a>
                             </div>
                             <!-- /CTA -->
                           </td>
@@ -303,24 +310,24 @@
                       <!-- End of Product -->
 
                       <!-- Start of Apparel -->
-                      <table class="col" align="center" width="50%" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation" style="padding: 24px;">
+                      <table class="col" align="center" width="50%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="padding: 24px;">
                         <tr>
                           <td align="center">
                             <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89">
-                              <img class="g-img" style="display: block;width:100%;max-width: 300px;height:auto;"
-                                width="300" border="0" src="https://i.ibb.co/YkL4KT7/apparel.jpg"
-                                alt="Image of a tall Afrikan woman in a long black dress" valign="middle">
+                              <img class="g-img" style="display: block;width:100%;max-width: 300px;height:auto;" width="300" border="0" src="https://i.ibb.co/YkL4KT7/apparel.jpg" alt="Image of a tall Afrikan woman in a long black dress" valign="middle">
                             </a>
                             <!-- CTA -->
                             <div><!--[if mso]>
-                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
-                                <w:anchorlock />
-                                <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:13px;font-weight:500;">Apparel</center>
-                              </v:roundrect>
-                            <![endif]--><a
-                                href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89"
-                                style="padding: 4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">Apparel</a>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                          xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com"
+                          style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650"
+                          fillcolor="#ffffff">
+                          <w:anchorlock />
+                          <center
+                            style="color:#000000;font-family: 'Poppins', sans-serif;font-size:13px;font-weight:500;">
+                            Apparel</center>
+                        </v:roundrect>
+                        <![endif]--><a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89" style="padding: 4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">Apparel</a>
                             </div>
                             <!-- /CTA -->
                           </td>
@@ -329,26 +336,24 @@
                       <!-- End of Product -->
 
                       <!-- Start of Jewelry -->
-                      <table class="col" align="left" width="50%" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation" style="padding: 24px;">
+                      <table class="col" align="left" width="50%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="padding: 24px;">
                         <tr>
                           <td align="center">
-                            <a
-                              href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-j5py9">
-                              <img class="g-img"
-                                style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;"
-                                width="300" border="0" src="https://i.ibb.co/R0kNWcW/jewelry.jpg"
-                                alt="Image of white with snake skin women's shoes" valign="middle">
+                            <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-j5py9">
+                              <img class="g-img" style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;" width="300" border="0" src="https://i.ibb.co/R0kNWcW/jewelry.jpg" alt="Image of white with snake skin women's shoes" valign="middle">
                             </a>
                             <!-- CTA -->
                             <div><!--[if mso]>
-                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
-                                    <w:anchorlock />
-                                    <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:16px;font-weight:500;">Product</center>
-                                  </v:roundrect>
-                                <![endif]--><a
-                                href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-j5py9"
-                                style="padding:4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">Jewelry</a>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                          xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com"
+                          style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650"
+                          fillcolor="#ffffff">
+                          <w:anchorlock />
+                          <center
+                            style="color:#000000;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;">
+                            Jewelry</center>
+                        </v:roundrect>
+                        <![endif]--><a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-j5py9" style="padding:4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">Jewelry</a>
                             </div>
                             <!-- /CTA -->
                           </td>
@@ -357,25 +362,25 @@
                       <!-- End of Jewelry -->
 
                       <!-- Start of Food & Drink -->
-                      <table class="col" align="center" width="50%" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation" style="padding: 24px;">
+                      <table class="col" align="center" width="50%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="padding: 24px;">
                         <tr>
                           <td align="center">
-                            <a
-                              href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-ar7wt-hglaw">
-                              <img class="g-img" style="display: block;width:100%;max-width: 300px;height:auto;"
-                                width="300" border="0" src="https://i.ibb.co/RzmF4Qs/table.jpg"
-                                alt="Image of a tall Afrikan woman in a long black dress" valign="middle">
+                            <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-a2954-d37ns">
+                              <img class="g-img" style="display: block;width:100%;max-width: 300px;height:auto;" width="300" border="0" src="https://i.ibb.co/RzmF4Qs/table.jpg" alt="Image of a tall Afrikan woman in a long black dress" valign="middle">
                             </a>
                             <!-- CTA -->
                             <div><!--[if mso]>
-                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
-                                    <w:anchorlock />
-                                    <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:13px;font-weight:500;">Apparel</center>
-                                  </v:roundrect>
-                                <![endif]--><a
-                                href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-ar7wt-hglaw"
-                                style="padding: 4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">Food
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                          xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com"
+                          style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650"
+                          fillcolor="#ffffff">
+                          <w:anchorlock />
+                          <center
+                            style="color:#000000;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;">
+                            Food
+                            & Drink</center>
+                        </v:roundrect>
+                        <![endif]--><a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-a2954-d37ns" style="padding: 4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">Food
                                 & Drink</a>
                             </div>
                             <!-- /CTA -->
@@ -385,32 +390,27 @@
                       <!-- End of Food & Drink -->
 
                       <!-- Start of Lifestyle -->
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                        style="padding: 24px;">
+                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="padding: 24px;">
                         <tr>
                           <td align="center">
-                            <a
-                              href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-ar7wt-hglaw">
-                              <img class="g-img col-ls" style="display: block;width:100%;max-width: 600px;height:auto;"
-                                width="600" border="0" src="https://i.ibb.co/Z6LYJms/lifestyle5.jpg"
-                                alt="Image of shelfs and dishes with a chair with aqua painted wall" valign="middle">
+                            <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-ar7wt-hglaw">
+                              <img class="g-img col-ls" style="display: block;width:100%;max-width: 600px;height:auto;" width="600" border="0" src="https://i.ibb.co/Z6LYJms/lifestyle5.jpg" alt="Image of shelfs and dishes with a chair with aqua painted wall" valign="middle">
                             </a>
-                            <a
-                              href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-ar7wt-hglaw">
-                              <img class="g-img col-ls2" style="display: none;width:100%;max-width: 600px;height:auto;"
-                                width="600" border="0" src="https://i.ibb.co/4T7fLtQ/food-drink3.jpg" alt="food-drink3"
-                                border="0" alt="Image of shelfs and dishes with a chair with aqua painted wall"
-                                valign="middle">
+                            <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-ar7wt-hglaw">
+                              <img class="g-img col-ls2" style="display: none;width:100%;max-width: 600px;height:auto;" width="600" border="0" src="https://i.ibb.co/4T7fLtQ/food-drink3.jpg" alt="food-drink3" border="0" alt="Image of shelfs and dishes with a chair with aqua painted wall" valign="middle">
                             </a>
                             <!-- CTA -->
                             <div><!--[if mso]>
-                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
-                                <w:anchorlock />
-                                <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:16px;font-weight:500;"">Shop Now</center>
-                              </v:roundrect>
-                            <![endif]--><a
-                                href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-ar7wt-hglaw"
-                                style="padding:4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">LifeStyle</a>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                          xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com"
+                          style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650"
+                          fillcolor="#ffffff">
+                          <w:anchorlock />
+                          <center
+                            style="color:#000000;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;">
+                            LifeStyle</center>
+                        </v:roundrect>
+                        <![endif]--><a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89-f6el4-ar7wt-hglaw" style="padding:4px;background-color:#F2F2F2;border:1px solid #000000;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 24px;">LifeStyle</a>
                             </div>
                             <!-- /CTA -->
                           </td>
@@ -424,24 +424,20 @@
               </td>
             </tr>
             <!-- End of Product Sections -->
-
             <!-- Start of Divider -->
             <tr>
-              <td align="center" style="background-color: #F2F2F2;padding: 25px 20px;">
+              <td align="center" style="background-color: #F2F2F2; padding: 25px 20px;">
                 <hr style="border: 2px solid #6DB597;width: 180px;">
               </td>
             </tr>
             <!-- End of Divider -->
-
-
             <!-- Start of Why Helio? Section -->
             <tr>
-              <td style="padding: 24px;background-color: #F2F2F2;">
+              <td style="padding: 24px;background-color: #F2F2F2; ">
                 <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
                   <tr>
                     <td>
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                        style="max-width: 600px;background-color: #E7E7E7;padding:50px 46px;">
+                      <table class="why_helios" width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="max-width: 600px;background-color: #E7E7E7;padding:50px 85px;">
                         <tr>
                           <td align="center">
                             <h2 style="font-size: 26px;font-family: 'Poppins', sans-serif;color: #000000;">Why Helios?!
@@ -451,12 +447,10 @@
                         <tr>
                           <td align="center">
 
-                            <h3
-                              style="font-size: 20px;font-weight:500;font-family: 'Poppins', sans-serif;color:#000000;">
+                            <h3 style="font-size: 20px;font-weight:500;font-family: 'Poppins', sans-serif;color:#000000;">
                               <img src="https://i.ibb.co/pZrXzD7/Vector.png" alt="Trophy icon for Expertise"> Expertise:
                             </h3>
-                            <p align="center"
-                              style="font-size: 18px;font-family: 'Montserrat', sans-serif;color: #000000;line-height: 24px;">
+                            <p align="center" style="font-size: 18px;font-family: 'Montserrat', sans-serif;color: #000000;line-height: 24px;">
                               Our team of skilled photographers specializes in
                               capturing the
                               essence of a wide range of
@@ -466,12 +460,10 @@
 
                         <tr>
                           <td align="center">
-                            <h3
-                              style="font-size: 20px;font-weight:500;font-family: 'Poppins', sans-serif;color:#000000;">
+                            <h3 style="font-size: 20px;font-weight:500;font-family: 'Poppins', sans-serif;color:#000000;">
                               <img src="https://i.ibb.co/Y3xPj9y/Vector-1.png" alt="HQ icon for Quality"> Quality:
                             </h3>
-                            <p align="center"
-                              style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;line-height: 24px;">
+                            <p align="center" style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;line-height: 24px;">
                               At Helios, we are committed to delivering imagery
                               that we're
                               proud of. We go above and beyond to ensure that every photo we produce is of the highest
@@ -480,13 +472,11 @@
                         </tr>
                         <tr>
                           <td align="center">
-                            <h3
-                              style="font-size: 20px;font-weight:500;font-family: 'Poppins', sans-serif;color:#000000;">
+                            <h3 style="font-size: 20px;font-weight:500;font-family: 'Poppins', sans-serif;color:#000000;">
                               <img src="https://i.ibb.co/kgFCXCv/Vector-2.png" alt="Star icon for Versatility">
                               Versatility:
                             </h3>
-                            <p align="center"
-                              style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;line-height: 24px;">
+                            <p align="center" style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;line-height: 24px;">
                               Whether you're in the fashion industry, food and
                               beverage, or
                               any other sector, our versatile team can adapt to your unique needs. </p>
@@ -500,22 +490,23 @@
               </td>
             </tr>
             <!-- End of Why Helio? Section -->
-
             <!-- Start of CTA2 -->
             <tr>
               <td>
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                  style="padding: 24px;background-color: #F2F2F2;">
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="padding: 24px;background-color: #F2F2F2; ">
                   <tr>
                     <td align="center">
                       <!-- CTA -->
                       <div><!--[if mso]>
-                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                          xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com"
+                          style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650"
+                          fillcolor="#ffffff">
                           <w:anchorlock />
-                          <center style="color:#000000;font-family:sans-serif;font-size:13px;font-weight:bold;">Shop Now</center>
+                          <center style="color:#000000;font-family:sans-serif;font-size:22px;font-weight:bold;">Get
+                            Started Today!</center>
                         </v:roundrect>
-                      <![endif]--><a href="https://www.heliosproductions.com/contact"
-                          style="padding:8px;background-color:#FF8E04;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:22px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:270px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 16px;">Get
+                        <![endif]--><a href="https://www.heliosproductions.com/contact" style="padding:8px;background-color:#FF8E04;border-radius:0px;color:#000000;display:inline-block;font-family: 'Poppins', sans-serif;font-size:22px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:270px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 16px;">Get
                           Started Today!</a>
                       </div>
                       <!-- /CTA -->
@@ -525,27 +516,23 @@
               </td>
             </tr>
             <!-- End of CTA2 -->
-
             <!-- Start of Divider -->
             <tr>
-              <td align="center" style="background-color: #F2F2F2;padding: 25px 20px;">
+              <td align="center" style="background-color: #F2F2F2; padding: 25px 20px;">
                 <hr style="border: 2px solid #6DB597;width: 180px;">
               </td>
             </tr>
             <!-- End of Divider -->
-
             <!-- Start of Distinguished Clients -->
             <tr>
               <td>
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                  style="padding: 24px 40px;background-color: #F2F2F2;">
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="padding: 24px 40px;background-color: #F2F2F2; ">
                   <tr>
                     <td align="center">
                       <h3 style="font-size: 22px;font-weight:500;font-family: 'Poppins', sans-serif;color:#000000;">Our
                         Distinguished
                         Clients:</h3>
-                      <p align="center"
-                        style="font-size: 20px;font-family: 'Montserrat', sans-serif;color:#000000;line-height: 30px;">
+                      <p align="center" style="font-size: 20px;font-family: 'Montserrat', sans-serif;color:#000000;line-height: 30px;">
                         At Helios, our commitment to excellence is reflected in
                         the trust placed in us by a diverse range of esteemed companies across various industries. Here
                         are just a few of the companies we've had the pleasure of working with:</p>
@@ -555,82 +542,53 @@
               </td>
             </tr>
             <!-- End of Distinguished Clients -->
-
             <!-- Start of Client Brands -->
             <tr>
               <td>
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
                   <tr>
-                    <td align="center">
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                        style="padding: 24px 24px 120px 24px;background-color: #F2F2F2;">
-                        <tr>
-                          <td align="center">
-                            <img src="https://i.ibb.co/3FytP2Z/aero.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/v3BPqbw/adidas.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/5r8y3FC/aramark.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/KhTDFQm/dressbarn.jpg" alt="" width="90">
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="center">
-                            <img src="https://i.ibb.co/LdQG41r/ck.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/zVP0pVD/dansk.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/0XvT4HG/haggar.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/K758Tcm/hampton.jpg" alt="" width="90">
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="center">
-                            <img src="https://i.ibb.co/9NFHyxJ/lenox.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/Sw5cMm0/kate.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/RbgZjC0/ikea.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/M91KVph/oneida.jpg" alt="" width="90">
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="center">
-                            <img src="https://i.ibb.co/jbVdCzk/under-armour.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/6BfBjcv/tumi.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/M1NsXSm/toysrus.jpg" alt="" width="90">
-                          </td>
-                          <td align="center">
-                            <img src="https://i.ibb.co/kBDWZdJ/reed-barton.jpg" alt="" width="90">
-                          </td>
-                        </tr>
-                      </table>
+                    <td align="center" style="background-color: #F2F2F2; padding: 0px 24px 80px 24px;">
+                      <ul style="padding:0;">
+                        <li style="list-style-type: none;">
+                          <img src="https://i.ibb.co/bdK6BY6/aeroOpt.png" alt="Aeropostale logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/pfqrLzw/adidas-Opt.png" alt="Adidas logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/xzh9ZjV/aramark-Opt.png" alt="Aramark logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/4t4d8RH/dressbarn-Opt.png" alt="Dressbarn logo" width="90" style="padding:8px 16px;">
+                        </li>
+                      </ul>
+                      <ul style="padding:0;">
+                        <li style="list-style-type: none;">
+                          <img src="https://i.ibb.co/zFcZ3HY/ckOpt.png" alt="Calvin Klein logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/s2GwJ40/danskOpt.png" alt="Dansk logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/J7ZgThD/haggar-Opt.png" alt="Haggar logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/TbRmNgH/hampton-Opt.png" alt="Hampton Forge logo" width="90" style="padding:8px 16px;">
+                        </li>
+                      </ul>
+                      <ul style="padding:0;">
+                        <li style="list-style-type: none;">
+                          <img src="https://i.ibb.co/d7r9wMD/lenoxOpt.png" alt="Lenox logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/FKL3rz5/kateOpt.png" alt="Kate Spade logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/B6hKJjY/ikeaOpt.png" alt="Ikea logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/gJ9qft3/oneida-Opt.png" alt="Oneida logo" width="90" style="padding:8px 16px;">
+                        </li>
+                      </ul>
+                      <ul style="padding:0;">
+                        <li style="list-style-type: none;">
+                          <img src="https://i.ibb.co/h1TT3rT/under-armour-Opt.png" alt="Under Armour logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/TYDw6HV/tumiOpt.png" alt="Tumi logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/HxszsQh/toysrus-Opt.png" alt="ToysRUs logo" width="90" style="padding:8px 16px;">
+                          <img src="https://i.ibb.co/516rSr1/reed-barton-Opt.png" alt="Reed&Barton logo" width="90" style="padding:8px 16px;">
+                        </li>
+                      </ul>
                     </td>
                   </tr>
                 </table>
               </td>
             </tr>
             <!-- End of Client Brands -->
-
             <!-- Start of Social Icons -->
             <tr>
-              <td style="padding: 8px;background-color: #6DB597;">
+              <td style="padding: 12px;background-color: #6DB597;">
                 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
                   <tr>
                     <td align="center">
@@ -638,8 +596,7 @@
                         <img src="https://i.ibb.co/26RgXXL/linkedin.png" alt="" style="padding: 4px 34px;" width="30px">
                       </a>
                       <a href="https://www.instagram.com/a_helios_productions/" target="_blank">
-                        <img src="https://i.ibb.co/pWhX92F/instagram.png" alt="" style="padding: 4px 34px;"
-                          width="30px">
+                        <img src="https://i.ibb.co/pWhX92F/instagram.png" alt="" style="padding: 4px 34px;" width="30px">
                       </a>
                       <a href="https://www.facebook.com/people/Helios-Productions/61550268176676/" target="_blank">
                         <img src="https://i.ibb.co/17CzcS0/facebook.png" alt="" style="padding: 4px 34px;" width="20px">
@@ -650,22 +607,20 @@
               </td>
             </tr>
             <!-- End of Social Icons -->
-
-
             <!-- Start of Footer -->
             <tr>
-              <td style="padding: 16px 24px;background-color: #F2F2F2;">
+              <td style="padding: 16px 24px;background-color: #F2F2F2; ">
                 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
                   <!-- Start of Helios Logo -->
                   <tr>
                     <td>
                       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
                         <tr>
-                          <td align="center" style="padding: 82px 0px 50px 0px;">
+                          <td align="center" style="padding: 82px 0px 50px 0px;line-height: 20px;">
                             <a href="https://www.heliosproductions.com/">
-                              <img src="https://i.ibb.co/SfJYGLw/Helios-Logo-Final-email.png" alt="" width="40%"
-                                style="background-position: center center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 600px;display: block;min-width:250px;">
+                              <img src="https://i.ibb.co/SfJYGLw/Helios-Logo-Final-email.png" alt="" width="200" style="background-position: center center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 600px;display: block;min-width:100px;">
                             </a>
+                            <!-- <p style="color: #000000;">Helios Brings Your Products To Light</p> -->
                           </td>
                         </tr>
                       </table>
@@ -680,33 +635,27 @@
 
                         <tr>
                           <td align=" center" style="padding:24px 0ox;line-height: 30px;">
-                            <h3
-                              style="font-size: 20px;font-family: 'Poppins', sans-serif;font-weight:500;color:#000000;">
+                            <h3 style="font-size: 20px;font-family: 'Poppins', sans-serif;font-weight:500;color:#000000;">
                               Contact</h3>
-                            <p style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;">John Doe
-                              <br>
+                            <p style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;">
+                              <!-- John Doe -->
+                              <!-- <br> -->
                               <!-- add your email -->
-                              <a style="text-decoration: underline;color:#FF8E04"
-                                href="mailto:john.doe@example.com">john.doe@example.com</a> <br>
+                              <!-- <a style="text-decoration: underline;color:#FF8E04" href="mailto:john.doe@example.com">john.doe@example.com</a> <br>
                               Phone: (555) 123-4567 <br>
-                              Fax: (555) 987-6543 <br>
-                              <b> <a style="color:#FF8E04;text-decoration:underline;font-weight:400;"
-                                  href="https://www.heliosproductions.com/contact">Contact Us</a></b>
+                              Fax: (555) 987-6543 <br> -->
+                              <b> <a style="color:#FF8E04;text-decoration:underline;font-weight:400;" href="https://www.heliosproductions.com/contact">Contact Us</a></b>
                             </p>
                           </td>
                         </tr>
 
                         <tr>
                           <td align="center" style="line-height: 30px;">
-                            <h3
-                              style="font-size: 20px;font-family: 'Poppins', sans-serif;font-weight:500;color:#000000;">
+                            <h3 style="font-size: 20px;font-family: 'Poppins', sans-serif;font-weight:500;color:#000000;">
                               Address</h3>
-                            <p style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;">123 Main
-                              Street
+                            <p style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;">3882 Upper Mountain Rd.,
                               <br>
-                              Anytown, AB<br>
-                              12345 <br>
-                              XYZ
+                              Furlong, PA 18925<br>
                             </p>
                           </td>
                         </tr>
@@ -714,10 +663,9 @@
                         <tr>
                           <td align="center">
                             <!-- add a link to email marketing service provider (ESP) -->
-                            <p style="color:#000000;font-size: 16px;font-weight: 300;">You’re receiving this email
+                            <p style="color:#000000;font-size: 18px;font-weight: 300;">You’re receiving this email
                               because
-                              <br> you subscribed to Helios Newsletter <br><a
-                                style="text-decoration: underline;color: #FF8E04;" href="#">Unsubscribe</a>
+                              <br> you subscribed to Helios Newsletter <br><a style="text-decoration: underline;color: #FF8E04;" href="#">Unsubscribe</a>
                             </p>
                           </td>
                         </tr>
@@ -730,11 +678,10 @@
                   <!-- Start of Copyrights -->
                   <tr>
                     <td>
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                        style="max-width: 600px;padding: 40px 0px 50px 0px;">
+                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="max-width: 600px;padding: 40px 0px 50px 0px;">
                         <tr>
                           <td align="center">
-                            <p style="font-size: 14px;font-family: 'Montserrat', sans-serif;color: #222222;">All Rights
+                            <p style="font-size: 16px;font-family: 'Montserrat', sans-serif;color: #222222;">All Rights
                               Reserved. &copy2023 Helio Productions</p>
                           </td>
                         </tr>
@@ -746,10 +693,6 @@
                 </table>
               </td>
             </tr>
-
-
-
-
             <!-- End of Footer -->
           </table>
         </td>
@@ -757,5 +700,4 @@
       <!-- End of Email -->
     </table>
   </body>
-
 </html>
