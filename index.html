@@ -1,5 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//Dtd HTML 4.0 transitional//EN">
-<html lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
 
   <head>
     <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
@@ -8,14 +9,17 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
     <!--<![endif]-->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark">
-    <meta name="supported-color-schemes" content="light dark">
-    <meta name="x-apple-disable-message-reformatting">
-    <!-- SUBJECT LINE GOES BETWEEN title TAGS BELOW-->
     <title>Osculant Origins</title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+    <!-- Tell iOS not to automatically link certain text strings. -->
     <!-- Google tag (gtag.js) -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ0FFVTG9R"></script>
     <script>
@@ -51,7 +55,7 @@
       padding: 0 !important;
       height: 100% !important;
       width: 100% !important;
-      background-color: #393939 !important;
+      background-color: #444 !important;
     }
 
 
@@ -75,7 +79,7 @@
       Margin: 0 margin;
     }
 
-    /* @media only screen and (min-width: 960px) {
+    @media only screen and (min-width: 960px) {
       .container {
         max-width: 960px !important;
       }
@@ -85,7 +89,7 @@
       .container {
         width: 600px !important;
       }
-    } */
+    }
 
     @media only screen and (max-width: 600px) {
       .container {
@@ -119,10 +123,10 @@
         width: 100% !important;
       }
 
-      /* img.g-img {
-        max-width: 280px !important;
+      img.g-img {
+        max-width: 100% !important;
         width: 100% !important;
-      } */
+      }
 
       .sub-header {
         font-size: 36px !important;
@@ -152,26 +156,210 @@
         width: 100% !important;
       }
 
-      .banner-title {
-        padding: 0 18px !important;
-      }
+      /* .banner-title {
+		    padding: 0 18px !important;
+		  } */
 
       .headings {
         font-size: 18px !important;
       }
     }
   </style>
-  <!-- What it does: Helps DPI scaling in Outlook 2007-2013 -->
-  <!--[if gte mso 9]>
-        <xml>
-          <o:OfficeDocumentSettings>
-            <o:AllowPNG />
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-          </o:OfficeDocumentSettings>
-        </xml>
-        <![endif]-->
 
-  <!-- CSS Reset : END -->
+
+  <!-- Progressive Enhancements : BEGIN -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    a {
+      text-decoration: none !important;
+    }
+
+    /* What it does: Hover styles for buttons and tags */
+    .s-btn__filled:hover {
+      background: #0077CC !important;
+      border-color: #0077CC !important;
+    }
+
+    .s-btn__white:hover {
+      background: #EFF0F1 !important;
+      border-color: #EFF0F1 !important;
+    }
+
+    .s-btn__outlined:hover {
+      background: rgba(0, 119, 204, .05) !important;
+      color: #005999 !important;
+    }
+
+    .s-tag:hover,
+    .post-tag:hover {
+      border-color: #cee0ed !important;
+      background: #cee0ed !important;
+    }
+
+    /* What it does: Styles markdown links that we can't write inline CSS for. */
+    .has-markdown a,
+    .has-markdown a:visited {
+      color: #0077CC !important;
+      text-decoration: none !important;
+    }
+
+    /* What it does: Styles markdown code blocks that we can't write inline CSS for. */
+    code {
+      padding: 1px 5px;
+      background-color: #EFF0F1;
+      color: #242729;
+      font-size: 13px;
+      line-height: inherit;
+      font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif;
+    }
+
+    pre {
+      margin: 0 0 15px;
+      line-height: 17px;
+      background-color: #EFF0F1;
+      padding: 4px 8px;
+      border-radius: 3px;
+      overflow-x: auto;
+    }
+
+    pre code {
+      margin: 0 0 15px;
+      padding: 0;
+      line-height: 17px;
+      background-color: none;
+    }
+
+    /* What it does: Styles markdown blockquotes that we can't write inline CSS for. */
+    blockquote {
+      margin: 0 0 15px;
+      padding: 4px 10px;
+      background-color: #FFF8DC;
+      border-left: 2px solid #ffeb8e;
+    }
+
+    blockquote p {
+      padding: 4px 0;
+      margin: 0;
+      overflow-wrap: break-word;
+    }
+
+    /* What it does: Rounds corners in email clients that support it */
+    .bar {
+      border-radius: 5px;
+    }
+
+    .btr {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .bbr {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      /* What it does: Forces table cells into full-width rows. */
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      /* And center justify these ones. */
+      .stack-column-center {
+        text-align: center !important;
+      }
+
+      /* Hides things in small viewports. */
+      .hide-on-mobile {
+        display: none !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        visibility: hidden !important;
+      }
+
+      /* What it does: Utility classes to reduce spacing for smaller viewports. */
+      .sm-p-none {
+        padding: 0 !important;
+      }
+
+      .sm-pt-none {
+        padding-top: 0 !important;
+      }
+
+      .sm-pb-none {
+        padding-bottom: 0 !important;
+      }
+
+      .sm-pr-none {
+        padding-right: 0 !important;
+      }
+
+      .sm-pl-none {
+        padding-left: 0 !important;
+      }
+
+      .sm-px-none {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .sm-py-none {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      .sm-p {
+        padding: 20px !important;
+      }
+
+      .sm-pt {
+        padding-top: 20px !important;
+      }
+
+      .sm-pb {
+        padding-bottom: 20px !important;
+      }
+
+      .sm-pr {
+        padding-right: 20px !important;
+      }
+
+      .sm-pl {
+        padding-left: 20px !important;
+      }
+
+      .sm-px {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .sm-py {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+      }
+
+      .sm-mb {
+        margin-bottom: 20px !important;
+      }
+
+      /* What it does: Utility classes to kill border radius for smaller viewports. Used mainly on the email's main container(s). */
+      .bar,
+      .btr,
+      .bbr {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  </style>
+  <!-- Progressive Enhancements : END -->
 
 
   <!-- Visually Hidden Preview Text : BEGIN -->
@@ -189,7 +377,7 @@
     <!--BEGIN Pre-text area-->
     <!-- <table style="margin: 0px auto; WIDTH: 600px" class="container" role="presentation" border="0" cellSpacing="0"
       cellPadding="0" width="100%" align="center">
-      
+      <tbody>
         <tr>
           <td
             style="text-align: center; display: none; font-family: Arial, sans-serif; VISIBILITY: hidden; color: #ffffff; FONT-SIZE: 16px; font-weight: normal">
@@ -201,7 +389,7 @@
             </div> -->
     <!-- </td>
         </tr>
-      
+      </tbody>
     </table> -->
     <!-- // END Pre-Text Area-->
 
@@ -231,7 +419,7 @@
       role="presentation">
       <!-- Start of Email -->
       <tr>
-        <td>
+        <td align="center">
           <table class="container" align="center" width="600" border="0" cellspacing="0"
             cellpadding="0" role="presentation">
             <!-- Start of Header -->
@@ -256,55 +444,65 @@
               <td align="center" bgcolor="#FFFFFF" valign="middle">
                 <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0"
                   role="presentation">
-
-                  <tr>
-                    <td align="center"
-                      style=" color: #fff; font-family: arial, sans-serif; font-size: 15px; text-align: center;">
-                      <a href="#"><img src="https://i.ibb.co/fxPQ6Jp/osculent-Origins.jpg"
-                          alt="hero image" width="600" height="" border="0"
-                          style="width: 100%; max-width: 600px; height: auto; display: block;">
-                      </a>
-                    </td>
-                  </tr>
-                  <!-- spacer -->
-                  <tr>
-                    <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="20"
-                      style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                      &nbsp;
-                    </td>
-                  </tr>
-
+                  <tbody>
+                    <tr>
+                      <td align="center"
+                        style=" color: #fff; font-family: arial, sans-serif; font-size: 15px; text-align: center;">
+                        <a href="#"><img src="https://i.ibb.co/fxPQ6Jp/osculent-Origins.jpg"
+                            alt="hero image" width="600" height="" border="0"
+                            style="width: 100%; max-width: 100%; height: auto; display: block;">
+                        </a>
+                      </td>
+                    </tr>
+                    <!-- spacer -->
+                    <tr>
+                      <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="20"
+                        style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
+                        &nbsp;
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </td>
             </tr>
             <tr>
-              <td align="center" bgcolor="#FFFFFF" style="background-color: #FFFFFF;">
-                <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0"
+              <td class="banner-title" align="center" bgcolor="#FFFFFF"
+                style="background-color: #FFFFFF;padding:0 24px;">
+                <table align="center" width="600" border="0" cellspacing="0" cellpadding="0"
                   role="presentation">
-
-                  <tr>
-                    <td class="banner-title" align="center" style="padding: 0 24px;">
-                      <!-- <h2 align="center"
-                          style="color: #000;font-size: 36px;text-align: center;text-transform: uppercase;Margin: 0;line-height: 36px;">
-                          LOREM IPSM DOLOR SIT AMET</h2> -->
-                      <p
-                        style="text-align: left;font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: 500;color: #393939;line-height: 30px;margin:0;padding:8px;">
-                        Step into a realm where beauty meets brilliance, where every brushstroke and
-                        skincare secret
-                        unveils the masterpiece within – welcome to Osculant Origins, where your
-                        beauty journey begins
-                        anew.
-                      </p>
-                    </td>
-                  </tr>
-                  <!-- spacer -->
-                  <tr>
-                    <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="20"
-                      style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                      &nbsp;
-                    </td>
-                  </tr>
-
+                  <tbody>
+                    <tr>
+                      <td align="center">
+                        <table align="center" width="100%" border="0" cellspacing="0"
+                          cellpadding="0" role="presentation">
+                          <tr>
+                            <td align="left">
+                              <!-- <h2 align="center"
+                                style="color: #000;font-size: 36px;text-align: center;text-transform: uppercase;Margin: 0;line-height: 36px;">
+                                LOREM IPSM DOLOR SIT AMET</h2> -->
+                              <p
+                                style="text-align: left;font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: 500;color: #393939;line-height: 30px;margin:0;">
+                                Step into a realm where beauty meets brilliance, where every
+                                brushstroke
+                                and skincare secret
+                                unveils the masterpiece within – welcome to Osculant Origins, where
+                                your
+                                beauty journey begins
+                                anew.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- spacer -->
+                    <tr>
+                      <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="40"
+                        style="font-size: 0; line-height: 40px;background-color: #FFFFFF;">
+                        &nbsp;
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </td>
             </tr>
@@ -312,7 +510,7 @@
             <!-- <tr>
               <td align="center" bgcolor="#FFFFFF" style="background-color: #FFFFFF;padding: 1em;">
                 <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
-                  
+                  <tbody>
                     <tr>
                       <td align="center" width="100%">
                         <img style="border-radius:50px;background-color:#9772C6;padding:8px;" src="https://i.ibb.co/zJxDydv/mdi-user.png" alt="pictogram of a user">
@@ -347,44 +545,40 @@
                       </td>
                       </tr>
                     </tr>
-                  
+                  </tbody>
                 </table>
               </td>
             </tr> -->
-            <!-- spacer -->
-            <tr>
-              <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="20"
-                style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                &nbsp;
-              </td>
-            </tr>
             <tr>
               <td align="center" style="background-color: #FFFFFF;padding:0 24px;">
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
+                <table width="600" align="center" border="0" cellspacing="0" cellpadding="0"
                   role="presentation">
-                  <tr>
-                    <td>
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation">
-
-                        <!-- CTA -->
-                        <div><!--[if mso]>
-                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
+                  <tbody>
+                    <tr>
+                      <td align="center">
+                        <table width="100%" align="center" border="0" cellspacing="0"
+                          cellpadding="0" role="presentation">
+                          <tbody>
+                            <!-- CTA -->
+                            <div>
+                              <!--[if mso]>
+                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:50px;v-text-anchor:middle;width:100%;border-radius:50px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
                               <w:anchorlock />
-                              <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:16px;font-weight:500;">
+                              <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:16px;font-weight:500;border-radius:50px;">
                                 Shop Now</center>
                             </v:roundrect>
-                          <![endif]--><a href="#"
-                            style="padding:4px 0;background: rgb(201,179,217);
-                      background: linear-gradient(180deg, rgba(201,179,217,1) 0%, rgba(151,114,198,1) 100%);border-radius:50px;color:#FFFFFF;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:100%;max-width:552px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 0;text-transform: uppercase;letter-spacing: 0.5px;">Shop
-                            Now</a>
-                        </div>
-                        <!-- /CTA -->
-
-                      </table>
-                    </td>
-                  </tr>
-
+                          <![endif]-->
+                              <a href="#"
+                                style="padding:4px 0;background: rgb(201,179,217);
+                      background: linear-gradient(180deg, rgba(201,179,217,1) 0%, rgba(151,114,198,1) 100%);border-radius:50px;color:#FFFFFF;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:50px;text-align:center;text-decoration:none;width:100%;max-width:100%;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 0;text-transform: uppercase;letter-spacing: 0.5px;">Shop
+                                Now</a>
+                            </div>
+                            <!-- /CTA -->
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </td>
             </tr>
@@ -393,387 +587,307 @@
               <td align="center">
                 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
                   role="presentation">
-
-                  <!-- spacer -->
-                  <tr>
-                    <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="70"
-                      style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                      &nbsp;
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <a href="#">
-                        <img src="https://i.ibb.co/6mvWTv5/coms-image-2.jpg" alt="makeup"
-                          style="display: block;width:100%;max-width: 100%;min-width:100px;height:auto;"
-                          width="600" border="0">
-                      </a>
-                    </td>
-                  </tr>
-
+                  <tbody>
+                    <!-- spacer -->
+                    <tr>
+                      <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="70"
+                        style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
+                        &nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <a href="#">
+                          <img class="g-img" src="https://i.ibb.co/6mvWTv5/coms-image-2.jpg"
+                            alt="makeup"
+                            style="display: block;width:100%;max-width: 100%;min-width:100px;height:auto;object-fit: cover;"
+                            width="600" border="0">
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </td>
             </tr>
             <!-- End of Image 1 -->
             <!-- Start of Banner -->
             <tr>
-              <td>
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
-                  role="presentation">
-                  <tr>
-                    <td>
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation">
-
-                        <!-- spacer -->
-                        <tr>
-                          <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="40"
-                            style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="background-color:#FFFFFF;padding:0 24px;line-height: 70px;">
-                            <p
-                              style="text-align: left; font-family: 'Poppins', sans-serif;color: #393939; margin:16px 0px;font-size: 60px;font-family: 'Poppins', sans-serif;font-weight: 900;">
-                              Ready to
-                              <span style="color: #9772C6;">elevate your beauty?</span>
-                            </p>
-                          </td>
-                        </tr>
-
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <!-- <tr>
-              <td align="center" style="padding:10px 24px 10px 24px;background-color:#FFFFFF;">
-                <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
-                  
-                    <tr>
-                      <td>
-                        <table class="right-content" align="left" width="50%" border="0" cellspacing="0" cellpadding="0"
-                          role="presentation">
-                          <tr>
-                            <td>
-                              <p
-                                style="text-align: left;font-size: 18px;font-family: 'Montserrat', sans-serif;font-weight: 400;color: #393939;line-height: 28px;margin:0;padding:8px;">
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit.
-                                Excepturi cum commodi impedit quaerat voluptates minima optio aliquid quibusdam, omnis
-                                quia.
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-                        <table class="right-content" align="center" width="50%" border="0" cellspacing="0"
-                          cellpadding="0" role="presentation">
-                          <tr>
-                            <td>
-                              <p
-                                style="text-align: left;font-size: 18px;font-family: 'Montserrat', sans-serif;font-weight: 400;color: #393939;line-height: 28px;margin:0;padding:8px;">
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit.
-                                Excepturi cum commodi impedit quaerat voluptates minima optio aliquid quibusdam, omnis
-                                quia.
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
+              <td align="center" style="background-color: #FFFFFF; padding:0 24px;">
+                <table align="center" width="600" align="center" border="0" cellspacing="0"
+                  cellpadding="0" role="presentation">
+                  <tbody>
+                    <!-- spacer -->
+                    <!-- <tr>
+                      <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="20"
+                        style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
+                        &nbsp;
                       </td>
-                      <td>
-                              <p style="text-align: left;font-size: 18px;font-family: 'Montserrat', sans-serif;font-weight: 400;color: #393939;line-height: 28px;margin:0;padding:8px;">
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit.
-                                Excepturi cum commodi impedit quaerat voluptates minima optio aliquid quibusdam, omnis quia.
-                              </p>
-                            </td>
+                    </tr> -->
+                    <tr>
+                      <td align="center" width="100%"
+                        style="background-color:#FFFFFF;line-height: 70px;">
+                        <p
+                          style="text-align: left; font-family: 'Poppins', sans-serif;color: #393939; margin:40px 0 20px 0;font-size: 60px;font-family: 'Poppins', sans-serif;font-weight: 900;">
+                          Ready to
+                          <span style="color: #9772C6;">elevate your beauty?</span>
+                        </p>
+                      </td>
                     </tr>
-                    </td>
-            </tr>
-                  
+                  </tbody>
                 </table>
               </td>
-            </tr>-->
-            <!-- End of Our Work Banner -->
-            <!-- spacer -->
-            <!-- <tr>
-              <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="10"
-                style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                &nbsp;
-              </td>
-            </tr> -->
-            <!-- Start of Divider -->
-            <!-- <tr>
-              <td align="center" style="background-color: #FFFFFF; padding:0;">
-                <hr style="border: 2px solid lightgrey;width: 200px;border-color: #c7a9ec;">
-              </td>
-            </tr> -->
-            <!-- spacer -->
-            <!-- <tr>
-              <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="10"
-                style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                &nbsp;
-              </td>
-            </tr> -->
-            <!-- end of spacer -->
+            </tr>
             <!-- Start of Product Sections -->
             <tr>
-              <td align="center" style="padding: 20px 24px;background-color:#FFFFFF;">
-                <table align="center" class="container" width="100%" border="0" cellspacing="0"
+              <td align="center"
+                style="padding: 20px 24px;background-color:#FFFFFF;max-width: 600px;margin: 0 auto;">
+                <table align="center" class="container" width="600" border="0" cellspacing="0"
                   cellpadding="0" role="presentation">
-                  <!-- Start of Product 1 / Image -->
-                  <tr>
-                    <td>
-                      <table align="center" class="container" width="100%" border="0"
-                        cellspacing="0" cellpadding="0" role="presentation">
-                        <tr>
-                          <td align="left" style="background-color: #FFFFFF;">
-                            <table class="right-content" align="left" width="50%" border="0"
-                              cellspacing="0" cellpadding="0" role="presentation">
-                              <tr>
-                                <td align="left">
-                                  <a href="#">
-                                    <img class="g-img"
-                                      style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;border-radius: 4px;"
-                                      width="270" border="0"
-                                      src="https://i.ibb.co/FXWDHNz/oo-image1.jpg"
-                                      alt="Image of white with snake skin women's shoes"
-                                      valign="middle">
-                                  </a>&nbsp;
-                                </td>
-                              </tr>
-                            </table>
-                            <!-- End of Product 1 / Image -->
-                            <!-- Start of Product 1 Content -->
-                            <table class="right-content" align="left" width="50%" height="275px"
-                              border="0" cellspacing="0" cellpadding="0" role="presentation">
-                              <tr>
-                                <td class="right-content" align="left"
-                                  style="padding-left: 16px;line-height: 28px;">
-                                  <p
-                                    style="font-size:22px;font-weight: 600;color: #393939;margin:0;font-family: 'Poppins', sans-serif;">
-                                    <span style="font-size:16px;font-weight: 400;">Tresonic™
-                                      Revitalizing Hair
-                                      Elixir</span><br>Signature Hairstyling
-                                  </p>
-                                  <p
-                                    style="color: #393939;font-size:18px;font-weight: 400;font-family: 'Montserrat', sans-serif;">
-                                    Treat yourself to a rejuvenating haircut or style transformation
-                                    with one of our
-                                    talented hairstylists.</p>
-                                  <!-- <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89">
+                  <tbody>
+                    <tr>
+                      <!-- Start of Product 1 -->
+                      <td align="center" style="margin: 0 auto;">
+                        <table class="right-content" align="left" width="50%" border="0"
+                          cellspacing="0" cellpadding="0" role="presentation">
+                          <tr>
+                            <td align="left">
+                              <a href="#">
+                                <img class="g-img"
+                                  style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;border-radius: 4px;object-fit: cover;"
+                                  width="270" border="0"
+                                  src="https://i.ibb.co/FXWDHNz/oo-image1.jpg"
+                                  alt="Image of white with snake skin women's shoes" valign="top">
+                              </a>&nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- End of Product 1 / Image -->
+                        <!-- Start of Product 1 Content -->
+                        <table class="right-content" align="left" width="50%" height="275px"
+                          border="0" cellspacing="0" cellpadding="0" role="presentation">
+                          <tr>
+                            <td class="right-content" align="left"
+                              style="padding-left: 16px;line-height: 28px;">
+                              <p
+                                style="font-size:22px;font-weight: 600;color: #393939;margin:0;font-family: 'Poppins', sans-serif;line-height: 28px;">
+                                <span style="font-size:16px;font-weight: 400;">Tresonic™
+                                  Revitalizing Hair
+                                  Elixir</span><br>Signature Hairstyling
+                              </p>
+                              <p
+                                style="color: #393939;font-size:18px;font-weight: 400;font-family: 'Montserrat', sans-serif;">
+                                Treat yourself to a rejuvenating haircut or style transformation
+                                with one of our
+                                talented hairstylists.</p>
+                              <!-- <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89">
                             <img class="g-img" style="display: block;width:100%;max-width: 300px;height:auto;" width="300"
                               border="0" src="https://placehold.co/222x275"
                               alt="Image of a tall Afrikan woman in a long black dress" valign="middle">
                           </a>&nbsp; -->
-                                  <!-- CTA -->
-                                  <div><!--[if mso]>
-                                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
+                              <!-- CTA -->
+                              <div><!--[if mso]>
+                                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:130px;border-radius: 50px;" arcsize="0%"  f>
                                             <w:anchorlock />
-                                            <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:13px;font-weight:500;">
-                                              Apparel</center>
+                                            <center style="color: #393939;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:50px;border-radius: 50px;">
+                                              Shop Now</center>
                                           </v:roundrect>
                                         <![endif]-->
-                                    <a href="#"
-                                      style="padding: 0;background: #FFFFFF;color:#FFFFFF;color:#9772c6;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:600;line-height:40px;text-align:left;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 12px;">Shop
-                                      Now &nbsp;></a>
-                                  </div>
-                                  <!-- /CTA -->
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <!-- end of Product 1 -->
-                  <!-- spacer -->
-                  <tr>
-                    <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="50"
-                      style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                      &nbsp;
-                    </td>
-                  </tr>
-                  <!-- Start of Product 2 / Image-->
-                  <tr>
-                    <td align="left" style="background-color: #FFFFFF;">
-                      <table class="right-content" align="left" width="50%" border="0"
-                        cellspacing="0" cellpadding="0" role="presentation">
-
-                        <tr>
-                          <td align="left">
-                            <a href="#">
-                              <img class="g-img"
-                                style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;border-radius: 4px;"
-                                width="270" border="0" src="https://i.ibb.co/nBMkjyN/oo-image3.jpg"
-                                alt="Image of white with snake skin women's shoes" valign="middle">
-                            </a>&nbsp;
-                          </td>
-                        </tr>
-                      </table>
-                      <!-- End of Product 2 / Image -->
-                      <!-- Start of Product 2 Content -->
-                      <table class="right-content" align="left" width="50%" height="275px"
-                        border="0" cellspacing="0" cellpadding="0" role="presentation">
-                        <tr>
-                          <td class="right-content" align="left" style="padding-left: 16px;">
-                            <p
-                              style="font-size:22px;font-weight: 600;color: #393939;margin:0;font-family: 'Poppins', sans-serif;line-height: 28px;">
-                              <span style="font-size:16px;font-weight: 400;">Glo™ Boosting Makeup
-                                Primer</span><br>Glamorous
-                              Makeup
-                            </p>
-                            <p
-                              style="color: #393939;font-size:18px;font-weight: 400;font-family: 'Montserrat', sans-serif;">
-                              Whether you're attending a special event or simply want to pamper
-                              yourself, our professional
-                              makeup artists will create a flawless look that enhances your natural
-                              beauty.</p>
-                            <!-- <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89">
-                        <img class="g-img" style="display: block;width:100%;max-width: 300px;height:auto;" width="300"
-                          border="0" src="https://placehold.co/222x275"
-                          alt="Image of a tall Afrikan woman in a long black dress" valign="middle">
-                      </a>&nbsp; -->
-                            <!-- CTA -->
-                            <div><!--[if mso]>
-                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
-                                <w:anchorlock />
-                                <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:13px;font-weight:500;">
-                                  Apparel</center>
-                              </v:roundrect>
-                            <![endif]-->
-                              <a href="#"
-                                style="padding: 0px;background: #FFFFFF;color:#FFFFFF;color:#9772c6;display:inline-block;font-family: 'Poppins', sans-serif;font-size:20px;font-weight:600;line-height:40px;text-align:left;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 12px;">Shop
-                                Now &nbsp;></a>
-                            </div>
-                            <!-- /CTA -->
-                          </td>
-                        </tr>
-                        <tr>
-                      </table>
-                      <!-- end of Product 2 -->
-                    </td>
-                  </tr>
-                  <!-- spacer -->
-                  <tr>
-                    <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="50"
-                      style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                      &nbsp;
-                    </td>
-                  </tr>
-                  <!-- Start of Product 3 / Image -->
-                  <tr>
-                    <td align="center" style="background-color: #FFFFFF;">
-                      <table class="right-content" align="left" width="50%" border="0"
-                        cellspacing="0" cellpadding="0" role="presentation">
-                        <tr>
-                          <td align="left">
-                            <a href="#">
-                              <img class="g-img"
-                                style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;padding:0;border-radius: 4px;"
-                                width="270" border="0" src="https://i.ibb.co/nwdtsZh/oo-image2.jpg"
-                                alt="Image of white with snake skin women's shoes" valign="middle">
-                            </a>&nbsp;
-                          </td>
-                        </tr>
-                        <!-- <tr>
-                    <td aria-hidden="true" height="20" style="font-size: 0; line-height: 0px;">
-                      &nbsp;
-                    </td>
-                  </tr> -->
-                      </table>
-                      <!-- End of Product 3 / Image -->
-                      <!-- Start of Product 3 Content -->
-                      <table class="right-content" align="left" width="50%" height="275px"
-                        border="0" cellspacing="0" cellpadding="0" role="presentation">
-
-                        <tr>
-                          <td class="right-content" align="left"
-                            style="padding-left: 16px;line-height: 28px;">
-                            <p
-                              style="font-size:22px;font-weight: 600;color: #393939;margin:0;font-family: 'Poppins', sans-serif;">
-                              <span style="font-size:16px;font-weight: 400;">LumiLux™ Rejuvenating
-                                Serum</span><br>Customized Skincare
-                            </p>
-                            <p
-                              style="color: #393939;font-size:18px;font-weight: 400;font-family: 'Montserrat', sans-serif;">
-                              Let our expert estheticians analyze your skin and recommend a
-                              personalized skincare regimen
-                              tailored to your unique needs.</p>
-                            <!-- <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89">
-                        <img class="g-img" style="display: block;width:100%;max-width: 300px;height:auto;" width="300"
-                          border="0" src="https://placehold.co/222x275"
-                          alt="Image of a tall Afrikan woman in a long black dress" valign="middle">
-                      </a>&nbsp; -->
-                            <!-- CTA -->
-                            <div><!--[if mso]>
-                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
-                                  <w:anchorlock />
-                                  <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:13px;font-weight:500;">
-                                    Apparel</center>
-                                </v:roundrect>
-                              <![endif]-->
-                              <a href="#"
-                                style="padding: 0px;background: #FFFFFF;color:#FFFFFF;color:#9772c6;display:inline-block;font-family: 'Poppins', sans-serif;font-size:20px;font-weight:600;line-height:40px;text-align:left;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 12px;">Shop
-                                Now &nbsp;></a>
-                            </div>
-                            <!-- /CTA -->
-                          </td>
-                        </tr>
-
-                      </table>
-                    </td>
-                  </tr>
-                  <!-- End of Product 3 Content -->
+                                <a href="#"
+                                  style="padding: 0;background: #FFFFFF;color:#FFFFFF;color:#9772c6;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:600;line-height:50px;text-align:left;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 12px;">Shop
+                                  Now &nbsp;></a>
+                              </div>
+                              <!-- /CTA -->
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- End of Product 1 -->
+                    </tr>
+                    <!-- </tbody> -->
+                    <!-- spacer -->
+                    <tr>
+                      <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="50"
+                        style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
+                        &nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- Start of Product 2 -->
+                      <td align="center" style="margin: 0 auto;">
+                        <table class="right-content" align="left" width="50%" border="0"
+                          cellspacing="0" cellpadding="0" role="presentation">
+                          <tr>
+                            <td align="left">
+                              <a href="#">
+                                <img class="g-img"
+                                  style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;border-radius: 4px;object-fit: cover;"
+                                  width="270" border="0"
+                                  src="https://i.ibb.co/nBMkjyN/oo-image3.jpg"
+                                  alt="Image of white with snake skin women's shoes" valign="top">
+                              </a>&nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- End of Product 1 / Image -->
+                        <!-- Start of Product 1 Content -->
+                        <table class="right-content" align="left" width="50%" height="275px"
+                          border="0" cellspacing="0" cellpadding="0" role="presentation">
+                          <tr>
+                            <td class="right-content" align="left"
+                              style="padding-left: 16px;line-height: 28px;">
+                              <p
+                                style="font-size:22px;font-weight: 600;color: #393939;margin:0;font-family: 'Poppins', sans-serif;line-height: 28px;">
+                                <span style="font-size:16px;font-weight: 400;">Glo™ Boosting Makeup
+                                  Primer</span><br>Glamorous Makeup
+                              </p>
+                              <p
+                                style="color: #393939;font-size:18px;font-weight: 400;font-family: 'Montserrat', sans-serif;">
+                                Whether you're attending a special event or simply want to pamper
+                                yourself,
+                                our professional
+                                makeup artists will create a flawless look that enhances your
+                                natural
+                                beauty.</p>
+                              <!-- <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89">
+                            <img class="g-img" style="display: block;width:100%;max-width: 300px;height:auto;" width="300"
+                              border="0" src="https://placehold.co/222x275"
+                              alt="Image of a tall Afrikan woman in a long black dress" valign="middle">
+                          </a>&nbsp; -->
+                              <!-- CTA -->
+                              <div><!--[if mso]>
+                                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
+                                            <w:anchorlock />
+                                            <center style="color:#000000;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;">
+                                              Shop Now</center>
+                                          </v:roundrect>
+                                        <![endif]-->
+                                <a href="#"
+                                  style="padding: 0;background: #FFFFFF;color:#FFFFFF;color:#9772c6;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:600;line-height:40px;text-align:left;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 12px;">Shop
+                                  Now &nbsp;></a>
+                              </div>
+                              <!-- /CTA -->
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- End of Product 2 -->
+                    </tr>
+                    <!-- spacer -->
+                    <tr>
+                      <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="50"
+                        style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
+                        &nbsp;
+                      </td>
+                    </tr>
+                    <!-- Start Section 3 -->
+                    <tr>
+                      <td align="center" style="margin: 0 auto;">
+                        <table align="center" width="100%" border="0" cellspacing="0"
+                          cellpadding="0" role="presentation">
+                          <tr>
+                            <!-- Start of Product 2 -->
+                            <td class="right-content" style="width: 50%;">
+                              <table class="right-content" align="left" width="50%" border="0"
+                                cellspacing="0" cellpadding="0" role="presentation">
+                                <tr>
+                                  <td align="left">
+                                    <a href="#">
+                                      <img class="g-img"
+                                        style="display: block;width:100%;max-width: 300px;min-width:100px;height:auto;border-radius: 4px;object-fit: cover;"
+                                        width="270" border="0"
+                                        src="https://i.ibb.co/nwdtsZh/oo-image2.jpg"
+                                        alt="Image of white with snake skin women's shoes"
+                                        valign="top">
+                                    </a>&nbsp;
+                                  </td>
+                                </tr>
+                              </table>
+                              <!-- End of Product 1 / Image -->
+                              <!-- Start of Product 1 Content -->
+                              <table class="right-content" align="left" width="50%" height="275px"
+                                border="0" cellspacing="0" cellpadding="0" role="presentation">
+                                <tr>
+                                  <td class="right-content" align="left"
+                                    style="padding-left: 16px;line-height: 28px;">
+                                    <p
+                                      style="font-size:22px;font-weight: 600;color: #393939;margin:0;font-family: 'Poppins', sans-serif;line-height: 28px;">
+                                      <span style="font-size:16px;font-weight: 400;">LumiLux™
+                                        Rejuvenating
+                                        Serum</span><br>Customized Skincare
+                                    </p>
+                                    <p
+                                      style="color: #393939;font-size:18px;font-weight: 400;font-family: 'Montserrat', sans-serif;">
+                                      Let our expert estheticians analyze your skin and recommend a
+                                      personalized
+                                      skincare regimen
+                                      tailored to your unique needs.</p>
+                                    <!-- <a href="https://www.heliosproductions.com/our-work/iduma-website-9msfy-hammj-5ze89">
+                            <img class="g-img" style="display: block;width:100%;max-width: 300px;height:auto;" width="300"
+                              border="0" src="https://placehold.co/222x275"
+                              alt="Image of a tall Afrikan woman in a long black dress" valign="middle">
+                          </a>&nbsp; -->
+                                    <!-- CTA -->
+                                    <div><!--[if mso]>
+                                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
+                                            <w:anchorlock />
+                                            <center style="color:#393939;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;">
+                                              Shop Now</center>
+                                          </v:roundrect>
+                                        <![endif]-->
+                                      <a href="#"
+                                        style="padding: 0;background: #FFFFFF;color:#FFFFFF;color:#9772c6;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:600;line-height:40px;text-align:left;text-decoration:none;width:130px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 12px;">Shop
+                                        Now &nbsp;></a>
+                                    </div>
+                                    <!-- /CTA -->
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <!-- End of Product 2 -->
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- End Section 3 -->
+                  </tbody>
                 </table>
               </td>
             </tr>
             <!-- End of Product Sections -->
-            <!-- Start of Divider -->
-            <!-- <tr>
-        <td align="center" style="background-color: #FFFFFF; padding: 0;">
-          <hr style="border: 2px solid #c7a9ec;width: 180px;">
-        </td>
-      </tr>
-      <!-- End of Divider -->
-            <!-- spacer -->
-            <!-- End of Companies Boilerplate Section -->
             <!-- Start of Social Icons -->
             <tr>
-              <td align="left">
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
-                  role="presentation" style="padding: 0 24px;background-color: #FFFFFF; ">
-                  <tr>
-                    <td>
-                      <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation" style="background-color: #FFFFFF; ">
-                        <!-- spacer -->
-                        <tr>
-                          <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="40"
-                            style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="center" width="100%" valign="middle"
-                            style="border-radius:4px;">
-                            <p
-                              style="font-size:50px;font-weight: 600;color: #393939;margin:0 0 20px 0;line-height: 48px;text-transform: uppercase;text-align: left;">
-                              Experience Beauty Unveiled</p>
-                            <a href="#">
-                              <img width="100%"
-                                style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;width: 100%;display: block;"
-                                src="https://i.ibb.co/qFntRJ7/oo-image6.jpg" alt="">
-                            </a>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
+              <td align="center" style="padding: 0 24px;background-color: #FFFFFF; ">
+                <table width="600" align="center" border="0" cellspacing="0" cellpadding="0"
+                  role="presentation">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0"
+                          role="presentation" style="background-color: #FFFFFF; ">
+                          <!-- spacer -->
+                          <tr>
+                            <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="40"
+                              style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" width="100%" valign="middle"
+                              style="border-radius:4px;">
+                              <p
+                                style="font-size:50px;font-weight: 600;color: #393939;margin:0 0 20px 0;line-height: 48px;text-transform: uppercase;text-align: left;font-family: 'Poppins', sans-serif;">
+                                Experience Beauty Unveiled</p>
+                              <a href="#">
+                                <img width="100%"
+                                  style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;width: 100%;display: block;"
+                                  src="https://i.ibb.co/qFntRJ7/oo-image6.jpg" alt="">
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </td>
             </tr>
@@ -785,44 +899,44 @@
               </td>
             </tr>
             <tr>
-              <td align="left">
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
-                  role="presentation" style="padding: 0 16px;background-color: #FFFFFF; ">
-
-                  <tr>
-                    <td>
-                      <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation" style="background-color: #FFFFFF; ">
-                        <tr>
-                          <td align="center" width="30%" valign="middle"
-                            style="border-radius:4px;padding: 8px">
-                            <a href="#">
-                              <img width="222"
-                                style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;width:100%;max-width: 222px;display: block;"
-                                src="https://i.ibb.co/6PPvyp8/oo-image-makup.jpg" alt="">
-                            </a>
-                          </td>
-                          <td align="center" width="30%" valign="middle"
-                            style="border-radius:4px;padding:8px;">
-                            <a href="#">
-                              <img width="222"
-                                style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;width:100%;max-width: 222px;display: block;"
-                                src="https://i.ibb.co/3YTyTqd/oo-image-makeup2.jpg" alt="">
-                            </a>
-                          </td>
-                          <td align="center" width="30%" valign="middle"
-                            style="border-radius:4px;padding:8px;">
-                            <a href="#">
-                              <img width="222"
-                                style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;width:100%;max-width: 222px;display: block;"
-                                src="https://i.ibb.co/ZVPKB20/oo-image-makeup3.jpg" alt="">
-                            </a>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-
+              <td align="center" style="background-color: #FFFFFF;">
+                <table width="600" align="center" border="0" cellspacing="0" cellpadding="0"
+                  role="presentation">
+                  <tbody>
+                    <tr>
+                      <td align="center">
+                        <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0"
+                          role="presentation" style="background-color: #FFFFFF; ">
+                          <tr>
+                            <td align="center" width="30%" valign="middle"
+                              style="border-radius:4px;padding: 2px">
+                              <a href="#">
+                                <img width="222"
+                                  style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;width:100%;max-width: 222px;display: block;"
+                                  src="https://i.ibb.co/6PPvyp8/oo-image-makup.jpg" alt="">
+                              </a>
+                            </td>
+                            <td align="center" width="30%" valign="middle"
+                              style="border-radius:4px;padding: 2px;">
+                              <a href="#">
+                                <img width="222"
+                                  style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;width:100%;max-width: 222px;display: block;"
+                                  src="https://i.ibb.co/3YTyTqd/oo-image-makeup2.jpg" alt="">
+                              </a>
+                            </td>
+                            <td align="center" width="30%" valign="middle"
+                              style="border-radius:4px;padding: 2px;">
+                              <a href="#">
+                                <img width="222"
+                                  style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;width:100%;max-width: 222px;display: block;"
+                                  src="https://i.ibb.co/ZVPKB20/oo-image-makeup3.jpg" alt="">
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </td>
             </tr>
@@ -835,13 +949,22 @@
               </td>
             </tr>
             <tr>
-              <td align="left" width="100%"
-                style="background-color: #FFFFFF;padding: 0 24px;margin:0;line-height: 30px;font-family: 'Montserrat', sans-serif;">
-                <p
-                  style="color: #393939;font-size:20px;font-weight: 500;margin:0;line-height: 30px;">
-                  At Osculant Origins, we believe that beauty begins with embracing your unique
-                  essence. That's why we're thrilled to invite you to experience the magic of
-                  Osculant Origins with a complimentary trial!</p>
+              <td align="center" width="600"
+                style="background-color: #FFFFFF;margin:0;line-height: 30px;font-family: 'Montserrat', sans-serif;margin: 0 auto;">
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
+                  role="presentation" style="padding: 0 24px;background-color: #FFFFFF; ">
+                  <tr>
+                    <td align="left">
+                      <p
+                        style="color: #393939;font-size:20px;font-weight: 500;margin:0;line-height: 30px;">
+                        At
+                        Osculant Origins, we believe that beauty begins with embracing your unique
+                        essence.
+                        That's why we're thrilled to invite you to experience the magic of
+                        Osculant Origins with a complimentary trial!</p>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
             <!-- spacer -->
@@ -853,32 +976,40 @@
             </tr>
             <tr>
             <tr>
-              <td align="center" style="background-color: #FFFFFF;padding:0 24px;">
+              <td align="center" width="600"
+                style="background-color: #FFFFFF;padding:0 24px;margin: 0 auto;">
                 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
                   role="presentation">
-
-                  <!-- CTA -->
-                  <div><!--[if mso]>
-                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
+                  <tbody>
+                    <!-- CTA -->
+                    <div><!--[if mso]>
+                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:40px;v-text-anchor:middle;width:100%;" arcsize="0%" strokecolor="#1e3650" fillcolor="#ffffff">
                               <w:anchorlock />
                               <center style="color:#393939;font-family: 'Poppins', sans-serif;font-size:16px;font-weight:500;">
-                                Shop Now</center>
+                                Try A Free Trial</center>
                             </v:roundrect>
                           <![endif]--><a href="#"
-                      style="padding:4px 0;background: #FFFFFF;border:2px solid #393939;border-radius:50px;color:#393939;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:40px;text-align:center;text-decoration:none;width:100%;max-width:552px;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 0;text-transform: uppercase;letter-spacing: 0.5px;">Try
-                      a Free Trial</a>
-                  </div>
-                  <!-- /CTA -->
-
+                        style="padding:4px 0;background: #FFFFFF;border:2px solid #393939;border-radius:50px;color:#393939;display:inline-block;font-family: 'Poppins', sans-serif;font-size:18px;font-weight:500;line-height:50px;text-align:center;text-decoration:none;width:100%;max-width:100%;-webkit-text-size-adjust:none;mso-hide:all;margin-top: 0;text-transform: uppercase;letter-spacing: 0.5px;">Try
+                        a Free Trial</a>
+                    </div>
+                    <!-- /CTA -->
+                  </tbody>
                 </table>
               </td>
             </tr>
             <!-- End of Social Icons -->
             <!-- spacer -->
             <tr>
-              <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="80"
-                style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
-                &nbsp;
+              <td align="center" width="100%" style="background-color: #FFFFFF;">
+                <table align="center" border="0" cellspacing="0" cellpadding="0"
+                  role="presentation">
+                  <tr>
+                    <td align="center" bgcolor="#FFFFFF" aria-hidden="true" height="80"
+                      style="font-size: 0; line-height: 0px;background-color: #FFFFFF;">
+                      &nbsp;
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
             <!-- Start of Footer -->
@@ -887,157 +1018,158 @@
         background: linear-gradient(215deg, rgba(214,205,233,1) 30%, rgba(169,157,200,1) 70%);">
                 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
                   role="presentation">
+                  <tbody>
+                    <tr>
+                      <td width="100%" align="center">
+                        <table width="100%" align="center" border="0" cellspacing="0"
+                          cellpadding="0" role="presentation">
+                          <tr>
+                            <td aria-hidden="true" height="20"
+                              style="font-size: 0; line-height: 0px;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- Start of Helios Logo -->
+                    <tr>
+                      <td>
+                        <table width="100%" align="center" border="0" cellspacing="0"
+                          cellpadding="0" role="presentation">
+                          <tr>
+                            <td align="center"
+                              style="padding: 20px 0px 20px 0px;line-height: 20px;">
+                              <a href="#" style="text-decoration: none;">
+                                <img src="https://i.ibb.co/sFkJrkR/Logo.png" alt="" width="70"
+                                  style="background-position: center center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 100%;display: block;min-width:70px;text-decoration: none;">
 
-                  <tr>
-                    <td width="100%" align="center">
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation">
-                        <tr>
-                          <td aria-hidden="true" height="20"
-                            style="font-size: 0; line-height: 0px;">
-                            &nbsp;
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <!-- Start of Helios Logo -->
-                  <tr>
-                    <td>
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation">
-                        <tr>
-                          <td align="center" style="padding: 20px 0px 20px 0px;line-height: 20px;">
-                            <a href="#">
-                              <img src="https://i.ibb.co/sFkJrkR/Logo.png" alt="" width="70"
-                                style="background-position: center center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 100%;display: block;min-width:70px;">
-
+                                <p
+                                  style="color: #393939;font-size: 50px;font-family: 'Imperial Script', 'Poppins', cursive;margin:16px 0;">
+                                  Osculant
+                                  Origins</p>
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- End of Helios Logo -->
+                          <tr>
+                            <td aria-hidden="true" height="30"
+                              style="font-size: 0; line-height: 0px;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- Start of Contact -->
+                    <tr>
+                      <td>
+                        <table width="100%" align="center" border="0" cellspacing="0"
+                          cellpadding="0" role="presentation">
+                          <tr>
+                            <td align="center" style="padding:24px 0ox;line-height: 30px;">
                               <p
-                                style="color: #393939;font-size: 50px;font-family: 'Imperial Script', 'Poppins', cursive;margin:16px 0;">
-                                Osculant
-                                Origins</p>
-                            </a>
-                          </td>
-                        </tr>
-                        <!-- End of Helios Logo -->
-                        <tr>
-                          <td aria-hidden="true" height="30"
-                            style="font-size: 0; line-height: 0px;">
-                            &nbsp;
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <!-- Start of Contact -->
-                  <tr>
-                    <td>
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation">
-                        <tr>
-                          <td align="center" style="padding:24px 0ox;line-height: 30px;">
-                            <p
-                              style="font-size: 20px;font-family: 'Poppins', sans-serif;color:#393939;font-weight: 600;margin:0;">
-                              Contact</p>
-                            <p
-                              style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;font-weight:500;line-height: 34px;">
-                              Osculant Origins<br>
-                              <a style="text-decoration: underline;color:#393939;text-underline-offset: 3px;font-weight:500;font-size:16px;text-underline-offset:4px;"
-                                href="mailto:john.doe@example.com">info@osculantorigins.com</a>
-                              <br>
-                              <a style="text-decoration: underline;color:#393939;text-underline-offset: 3px;font-weight:500;font-size:16px;text-underline-offset:4px;"
-                                href="https://www.example.com"
-                                target="_blank">osculantorigins.com</a>
-                              <br>
-                              <a style="text-decoration: underline;color:#393939;text-underline-offset: 3px;font-weight:500;font-size:16px;text-underline-offset:4px;"
-                                href="tel:1234567890">123-456-7890</a>
-                              <!-- <b>  -->
-                              <!-- <a style="color:#FF8E04;text-decoration:underline;font-weight:400;"
+                                style="font-size: 20px;font-family: 'Poppins', sans-serif;color:#393939;font-weight: 600;margin:0;">
+                                Contact</p>
+                              <p
+                                style="font-size: 18px;font-family: 'Montserrat', sans-serif;color:#000000;font-weight:500;line-height: 34px;">
+                                Osculant Origins<br>
+                                <a style="text-decoration: underline;color:#393939;text-underline-offset: 3px;font-weight:500;font-size:16px;text-underline-offset:4px;"
+                                  href="mailto:john.doe@example.com">info@osculantorigins.com</a>
+                                <br>
+                                <a style="text-decoration: underline;color:#393939;text-underline-offset: 3px;font-weight:500;font-size:16px;text-underline-offset:4px;"
+                                  href="https://www.example.com"
+                                  target="_blank">osculantorigins.com</a>
+                                <br>
+                                <a style="text-decoration: underline;color:#393939;text-underline-offset: 3px;font-weight:500;font-size:16px;text-underline-offset:4px;"
+                                  href="tel:1234567890">123-456-7890</a>
+                                <!-- <b>  -->
+                                <!-- <a style="color:#FF8E04;text-decoration:underline;font-weight:400;"
                             href="https://www.heliosproductions.com/contact">Contact Us</a> -->
-                              <!-- </b> -->
-                            </p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td aria-hidden="true" height="50"
-                            style="font-size: 0; line-height: 0px;">
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="center" style="line-height: 24px;">
-                            <p
-                              style="font-size: 20px;font-family: 'Poppins', sans-serif;font-weight:600;color:#393939;margin:0;">
-                              Address</p>
-                            <p
-                              style="font-size: 16px;font-family: 'Montserrat', sans-serif;color:#393939;font-weight: 500;line-height: 34px;">
-                              Osculant Origins Beauty Studio<br>
-                              123 Blossom Boulevard<br>
-                              Springfield, Blossom County<br>
-                              Fictitiousland, FL 12345
-                            </p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td aria-hidden="true" height="20"
-                            style="font-size: 0; line-height: 0px;">
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <table width="100%" align="center" border="0" cellspacing="0"
-                              cellpadding="0" role="presentation"
-                              style="border-bottom: 2px solid #393939;padding: 8px 0;border-top: 2px solid #393939;">
-                              <!-- <tr>
+                                <!-- </b> -->
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td aria-hidden="true" height="50"
+                              style="font-size: 0; line-height: 0px;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" style="line-height: 24px;">
+                              <p
+                                style="font-size: 20px;font-family: 'Poppins', sans-serif;font-weight:600;color:#393939;margin:0;">
+                                Address</p>
+                              <p
+                                style="font-size: 16px;font-family: 'Montserrat', sans-serif;color:#393939;font-weight: 500;line-height: 34px;">
+                                Osculant Origins Beauty Studio<br>
+                                123 Blossom Boulevard<br>
+                                Springfield, Blossom County<br>
+                                Fictitiousland, FL 12345
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td aria-hidden="true" height="20"
+                              style="font-size: 0; line-height: 0px;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table width="100%" align="center" border="0" cellspacing="0"
+                                cellpadding="0" role="presentation"
+                                style="border-bottom: 2px solid #393939;padding: 8px 0;border-top: 2px solid #393939;">
+                                <!-- <tr>
                                   <td aria-hidden="true" height="30" style="font-size: 0; line-height: 0px;">
                                     &nbsp;
                                   </td>
                                 </tr> -->
-                              <tr>
-                                <td align="center" width="25%" valign="middle"
-                                  style="border-radius:50px;padding: 2px;">
-                                  <a href="#">
-                                    <img width="100%"
-                                      style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 45px;display: block;"
-                                      src="https://i.ibb.co/CV6wYpK/icon-instagram.png" alt="">
-                                  </a>
-                                </td>
-                                <td align="center" width="25%" valign="middle"
-                                  style="border-radius:50px;padding: 2px;">
-                                  <a href="#">
-                                    <img width="100%"
-                                      style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 45px;display: block;"
-                                      src="https://i.ibb.co/xfS9Gyr/icon-facebook.png" alt="">
-                                  </a>
-                                </td>
-                                <td align="center" width="25%" valign="middle"
-                                  style="border-radius:50px;padding: 2px;">
-                                  <a href="#">
-                                    <img width="100%"
-                                      style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 45px;display: block;"
-                                      src="https://i.ibb.co/wYjbBfV/icon-youtube.png" alt="">
-                                  </a>
-                                </td>
-                                <td align="center" width="25%" valign="middle"
-                                  style="border-radius:50px;padding: 2px;">
-                                  <a href="#">
-                                    <img width="100%"
-                                      style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 45px;display: block;"
-                                      src="https://i.ibb.co/80Bynxw/icon-tiktok.png" alt="">
-                                  </a>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td aria-hidden="true" height="20"
-                            style="font-size: 0; line-height: 0px;">
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <!-- <tr>
+                                <tr>
+                                  <td align="center" width="25%" valign="middle"
+                                    style="border-radius:50px;padding: 2px;">
+                                    <a href="#">
+                                      <img width="45"
+                                        style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 45px;display: block;"
+                                        src="https://i.ibb.co/CV6wYpK/icon-instagram.png" alt="">
+                                    </a>
+                                  </td>
+                                  <td align="center" width="25%" valign="middle"
+                                    style="border-radius:50px;padding: 2px;">
+                                    <a href="#">
+                                      <img width="45"
+                                        style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 45px;display: block;"
+                                        src="https://i.ibb.co/xfS9Gyr/icon-facebook.png" alt="">
+                                    </a>
+                                  </td>
+                                  <td align="center" width="25%" valign="middle"
+                                    style="border-radius:50px;padding: 2px;">
+                                    <a href="#">
+                                      <img width="45"
+                                        style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 45px;display: block;"
+                                        src="https://i.ibb.co/wYjbBfV/icon-youtube.png" alt="">
+                                    </a>
+                                  </td>
+                                  <td align="center" width="25%" valign="middle"
+                                    style="border-radius:50px;padding: 2px;">
+                                    <a href="#">
+                                      <img width="45"
+                                        style="background-position: center;background-repeat: no-repeat;background-size: cover;object-fit: cover;max-width: 45px;display: block;"
+                                        src="https://i.ibb.co/80Bynxw/icon-tiktok.png" alt="">
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td aria-hidden="true" height="20"
+                              style="font-size: 0; line-height: 0px;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <!-- <tr>
                       <td width="100%" align="center">
                         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
                           role="presentation">
@@ -1090,44 +1222,47 @@
                         </table>
                       </td>
                     </tr> -->
-                        <tr>
-                          <td align="center" style="line-height: 30px;">
-                            <!-- add a link to email marketing service provider (ESP) -->
-                            <p style="color:#393939;font-size: 16px;font-weight: 400;">You’re
-                              receiving this email
-                              because
-                              <br> you subscribed to Helios Newsletter <br><a
-                                style="text-decoration: underline;color: #393939;text-underline-offset:4px;"
-                                href="https://example.com">Unsubscribe</a>
-                            </p>
-                          </td>
-                        </tr>
-                        <!-- End of Contact -->
-                        <tr>
-                          <td aria-hidden="true" height="40"
-                            style="font-size: 0; line-height: 16px;">
-                            &nbsp;
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <!-- Start of Copyrights -->
-                  <tr>
-                    <td>
-                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
-                        role="presentation" style="max-width: 600px;padding: 0px;">
-                        <tr>
-                          <td align="center">
-                            <p
-                              style="font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight:500;color: #393939;white-space: nowrap;margin: 16px 0;">
-                              Copyright&copy; 2024 Osculant Origins</p>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-
+                          <tr>
+                            <td align="center" style="line-height: 30px;">
+                              <!-- add a link to email marketing service provider (ESP) -->
+                              <p
+                                style="color:#393939;font-size: 16px;font-weight: 400;font-family: 'Poppins', sans-serif;">
+                                You’re receiving
+                                this email
+                                because
+                                <br> you subscribed to Helios Newsletter <br><a
+                                  style="text-decoration: underline;color: #393939;text-underline-offset:4px;"
+                                  href="https://example.com">Unsubscribe</a>
+                              </p>
+                            </td>
+                          </tr>
+                          <!-- End of Contact -->
+                          <tr>
+                            <td aria-hidden="true" height="40"
+                              style="font-size: 0; line-height: 16px;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- Start of Copyrights -->
+                    <tr>
+                      <td>
+                        <table width="100%" align="center" border="0" cellspacing="0"
+                          cellpadding="0" role="presentation"
+                          style="max-width: 600px;padding: 0px;">
+                          <tr>
+                            <td align="center">
+                              <p
+                                style="font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight:500;color: #393939;white-space: nowrap;margin: 16px 0;">
+                                Copyright&copy; 2024 Osculant Origins</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
                   <!-- End of Copyrights -->
                 </table>
               </td>
